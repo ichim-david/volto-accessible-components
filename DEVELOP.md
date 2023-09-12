@@ -1,12 +1,12 @@
-# volto-addon-template
+# volto-accessible-components
 
 ## Develop
 
 1. Make sure you have `docker` and `docker compose` installed and running on your machine:
 
     ```Bash
-    git clone https://github.com/eea/volto-addon-template.git
-    cd volto-addon-template
+    git clone https://github.com/eea/volto-accessible-components.git
+    cd volto-accessible-components
     git checkout -b bugfix-123456 develop
     make
     make start
@@ -19,10 +19,10 @@
 1.  Happy hacking!
 
     ```Bash
-    cd src/addons/volto-addon-template/
+    cd src/addons/volto-accessible-components/
     ```
 
-### Or add @eeacms/volto-addon-template to your Volto project
+### Or add @eeacms/volto-accessible-components to your Volto project
 
 Before starting make sure your development environment is properly set. See [Volto Developer Documentation](https://docs.voltocms.com/getting-started/install/)
 
@@ -32,15 +32,15 @@ Before starting make sure your development environment is properly set. See [Vol
 
 1.  Create new volto app
 
-        yo @plone/volto my-volto-project --addon @eeacms/volto-addon-template --skip-install
+        yo @plone/volto my-volto-project --addon @eeacms/volto-accessible-components --skip-install
         cd my-volto-project
 
 1.  Add the following to `mrs.developer.json`:
 
         {
-            "volto-addon-template": {
-                "url": "https://github.com/eea/volto-addon-template.git",
-                "package": "@eeacms/volto-addon-template",
+            "volto-accessible-components": {
+                "url": "https://github.com/eea/volto-accessible-components.git",
+                "package": "@eeacms/volto-accessible-components",
                 "branch": "develop",
                 "path": "src"
             }
@@ -70,19 +70,19 @@ Before starting make sure your development environment is properly set. See [Vol
 
 1.  Happy hacking!
 
-        cd src/addons/volto-addon-template/
+        cd src/addons/volto-accessible-components/
 
 ## Cypress
 
 To run cypress locally, first make sure you don't have any Volto/Plone running on ports `8080` and `3000`.
 
 You don't have to be in a `clean-volto-project`, you can be in any Volto Frontend
-project where you added `volto-addon-template` to `mrs.developer.json`
+project where you added `volto-accessible-components` to `mrs.developer.json`
 
 Go to:
 
   ```BASH
-  cd src/addons/volto-addon-template/
+  cd src/addons/volto-accessible-components/
   ```
 
 Start:
@@ -92,9 +92,20 @@ Start:
   make start
   ```
 
-This will build and start with Docker a clean `Plone backend` and `Volto Frontend` with `volto-addon-template` block installed.
+This will build and start with Docker a clean `Plone backend` and `Volto Frontend` with `volto-accessible-components` block installed.
 
 Open Cypress Interface:
+
+  ```Bash
+  make cypress-open
+  ```
+
+Or run it:
+
+  ```Bash
+  make cypress-run
+  ```
+face:
 
   ```Bash
   make cypress-open
